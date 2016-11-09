@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D912B61B1DC8D2B200A89785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912B61A1DC8D2B200A89785 /* AppDelegate.swift */; };
+		D912B61D1DC8D2B200A89785 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912B61C1DC8D2B200A89785 /* ViewController.swift */; };
+		D912B6221DC8D2B200A89785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D912B6211DC8D2B200A89785 /* Assets.xcassets */; };
+		D912B6251DC8D2B200A89785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D912B6231DC8D2B200A89785 /* LaunchScreen.storyboard */; };
+		D9D985D51DCA2EBC00531D56 /* OpenChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D985D41DCA2EBC00531D56 /* OpenChatViewController.swift */; };
+		D9D985DC1DCA3EF900531D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D985DA1DCA3EF900531D56 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		742078A59BFC206AF063D4DE /* Pods-chatik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatik.release.xcconfig"; path = "Pods/Target Support Files/Pods-chatik/Pods-chatik.release.xcconfig"; sourceTree = "<group>"; };
+		7878D206E8C724315CD9E442 /* Pods-chatik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chatik/Pods-chatik.debug.xcconfig"; sourceTree = "<group>"; };
+		D912B6171DC8D2B200A89785 /* chatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D912B61A1DC8D2B200A89785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D912B61C1DC8D2B200A89785 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D912B6211DC8D2B200A89785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D912B6241DC8D2B200A89785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D912B6261DC8D2B200A89785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9D985D41DCA2EBC00531D56 /* OpenChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenChatViewController.swift; sourceTree = "<group>"; };
+		D9D985DB1DCA3EF900531D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D912B6141DC8D2B200A89785 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59210A1E09F64096BE38C85C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DF5AD48F00A1D72863120DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7878D206E8C724315CD9E442 /* Pods-chatik.debug.xcconfig */,
+				742078A59BFC206AF063D4DE /* Pods-chatik.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D912B60E1DC8D2B200A89785 = {
+			isa = PBXGroup;
+			children = (
+				D912B6191DC8D2B200A89785 /* chatik */,
+				D912B6181DC8D2B200A89785 /* Products */,
+				6DF5AD48F00A1D72863120DA /* Pods */,
+				59210A1E09F64096BE38C85C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D912B6181DC8D2B200A89785 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D912B6171DC8D2B200A89785 /* chatik.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D912B6191DC8D2B200A89785 /* chatik */ = {
+			isa = PBXGroup;
+			children = (
+				D9D985D41DCA2EBC00531D56 /* OpenChatViewController.swift */,
+				D912B61A1DC8D2B200A89785 /* AppDelegate.swift */,
+				D912B61C1DC8D2B200A89785 /* ViewController.swift */,
+				D912B6211DC8D2B200A89785 /* Assets.xcassets */,
+				D9D985DA1DCA3EF900531D56 /* Main.storyboard */,
+				D912B6231DC8D2B200A89785 /* LaunchScreen.storyboard */,
+				D912B6261DC8D2B200A89785 /* Info.plist */,
+			);
+			path = chatik;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D912B6161DC8D2B200A89785 /* chatik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D912B6291DC8D2B200A89785 /* Build configuration list for PBXNativeTarget "chatik" */;
+			buildPhases = (
+				6F64BF7D4834BC584109D4AA /* [CP] Check Pods Manifest.lock */,
+				D912B6131DC8D2B200A89785 /* Sources */,
+				D912B6141DC8D2B200A89785 /* Frameworks */,
+				D912B6151DC8D2B200A89785 /* Resources */,
+				E4187AB6C1EDD56D7A5DA260 /* [CP] Embed Pods Frameworks */,
+				3FA8F79B689A2FE74BA4DFBC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chatik;
+			productName = chatik;
+			productReference = D912B6171DC8D2B200A89785 /* chatik.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D912B60F1DC8D2B200A89785 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Migo group";
+				TargetAttributes = {
+					D912B6161DC8D2B200A89785 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D912B6121DC8D2B200A89785 /* Build configuration list for PBXProject "chatik" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D912B60E1DC8D2B200A89785;
+			productRefGroup = D912B6181DC8D2B200A89785 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D912B6161DC8D2B200A89785 /* chatik */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D912B6151DC8D2B200A89785 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D985DC1DCA3EF900531D56 /* Main.storyboard in Resources */,
+				D912B6251DC8D2B200A89785 /* LaunchScreen.storyboard in Resources */,
+				D912B6221DC8D2B200A89785 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FA8F79B689A2FE74BA4DFBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chatik/Pods-chatik-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F64BF7D4834BC584109D4AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4187AB6C1EDD56D7A5DA260 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chatik/Pods-chatik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D912B6131DC8D2B200A89785 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D985D51DCA2EBC00531D56 /* OpenChatViewController.swift in Sources */,
+				D912B61D1DC8D2B200A89785 /* ViewController.swift in Sources */,
+				D912B61B1DC8D2B200A89785 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D912B6231DC8D2B200A89785 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D912B6241DC8D2B200A89785 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D9D985DA1DCA3EF900531D56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9D985DB1DCA3EF900531D56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D912B6271DC8D2B200A89785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D912B6281DC8D2B200A89785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D912B62A1DC8D2B200A89785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7878D206E8C724315CD9E442 /* Pods-chatik.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = chatik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tutorial.chatik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D912B62B1DC8D2B200A89785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742078A59BFC206AF063D4DE /* Pods-chatik.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = chatik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tutorial.chatik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D912B6121DC8D2B200A89785 /* Build configuration list for PBXProject "chatik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D912B6271DC8D2B200A89785 /* Debug */,
+				D912B6281DC8D2B200A89785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D912B6291DC8D2B200A89785 /* Build configuration list for PBXNativeTarget "chatik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D912B62A1DC8D2B200A89785 /* Debug */,
+				D912B62B1DC8D2B200A89785 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D912B60F1DC8D2B200A89785 /* Project object */;
+}
