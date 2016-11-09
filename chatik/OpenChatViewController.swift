@@ -53,6 +53,10 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
             textView.delegate = self
             self.tableView.delegate = self
             self.tableView.dataSource = self
+            //self.tableView.estimatedRowHeight = 80
+            //self.tableView.rowHeight = UITableViewAutomaticDimension
+            //self.tableView.setNeedsLayout()
+            //self.tableView.layoutIfNeeded()
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIKeyboardDidShowNotification, object: nil)
@@ -114,6 +118,11 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
     
     @IBAction func back(sender: UIBarButtonItem)
     {
+        closeOpenChat()
+    }
+    
+    func closeOpenChat()
+    {
         SBDMain.removeChannelDelegateForIdentifier(self.delegateIdentifier!)
         SBDMain.removeConnectionDelegateForIdentifier(self.delegateIdentifier!)
         let presentedModally = presentingViewController is UINavigationController
@@ -121,17 +130,12 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
         {
             self.openChat!.exitChannelWithCompletionHandler(
                 { (error) in
-                if error != nil {
-                    print("can not exit the channel!")
+                    if error != nil {
+                        print("can not exit the channel!")
                     }
-                })
+            })
             dismissViewControllerAnimated(true, completion: {})
         }
-    }
-    
-    func closeOpenChat()
-    {
-        
     }
     
     @IBAction func send(sender: UIButton)
@@ -160,6 +164,15 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
         }
     }
     
+    func channelWasChanged(sender: SBDBaseChannel)
+    {
+        if sender == self.openChat
+        {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.navigationItem.title = self.openChat?.name
+            })
+        }
+    }
     
     
     // MARK: TableView
@@ -172,6 +185,11 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
             let userMessage = message as! SBDUserMessage
             cell.textLabel?.text = userMessage.sender!.nickname!
             cell.detailTextLabel?.text = userMessage.message!
+            cell.detailTextLabel?.numberOfLines = 0
+            cell.textLabel?.numberOfLines = 0
+            //cell.detailTextLabel?.sizeToFit()
+            //cell.setNeedsLayout()
+            //cell.layoutIfNeeded()
         }
         return cell
     }
@@ -186,6 +204,15 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50
+        //return UITableViewAutomaticDimension
     }
     
     //MARK: TextView
@@ -203,6 +230,7 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
         }
         return true
     }
+    
     func textViewDidChange(textView: UITextView)
     {
         if self.textView.text.utf16.count == 0

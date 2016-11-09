@@ -14,11 +14,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 {
     
     @IBOutlet weak var tableView: UITableView!
-    var isUploaded:Bool = false{
-        didSet {
-            reloadMyTable()
-        }
-    }
     
     let channelCellIdentifier = "openChannels"
     //let USER_ID = "anton.chugunov10@gmail.com"
@@ -35,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        isUploaded = false
+        //isUploaded = false
     }
 
     override func didReceiveMemoryWarning()
@@ -87,15 +82,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             })
         })
         
-    }
-    
-    func reloadMyTable()
-    {
-        if isUploaded
-        {
-            self.tableView.reloadData()
-            isUploaded = false
-        }
     }
     
     //MARK: TableView
