@@ -85,7 +85,7 @@ class OpenChatViewController: UIViewController, UITextViewDelegate, UITableViewD
                 else { print("entering the channel...") }
         }
     }
-    //adf
+    //another commit
     func loadPreviousMessages()
     {
         self.messageQuery = self.openChat?.createPreviousMessageListQuery()
