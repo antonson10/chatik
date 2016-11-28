@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D912B61B1DC8D2B200A89785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912B61A1DC8D2B200A89785 /* AppDelegate.swift */; };
-		D912B61D1DC8D2B200A89785 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912B61C1DC8D2B200A89785 /* ViewController.swift */; };
+		D912B61D1DC8D2B200A89785 /* OpenChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912B61C1DC8D2B200A89785 /* OpenChatListViewController.swift */; };
 		D912B6221DC8D2B200A89785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D912B6211DC8D2B200A89785 /* Assets.xcassets */; };
 		D912B6251DC8D2B200A89785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D912B6231DC8D2B200A89785 /* LaunchScreen.storyboard */; };
+		D9A223B21DD37F8D00865BEC /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A223B11DD37F8D00865BEC /* MainPageViewController.swift */; };
 		D9D985D51DCA2EBC00531D56 /* OpenChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D985D41DCA2EBC00531D56 /* OpenChatViewController.swift */; };
 		D9D985DC1DCA3EF900531D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D985DA1DCA3EF900531D56 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,11 +20,12 @@
 		742078A59BFC206AF063D4DE /* Pods-chatik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatik.release.xcconfig"; path = "Pods/Target Support Files/Pods-chatik/Pods-chatik.release.xcconfig"; sourceTree = "<group>"; };
 		7878D206E8C724315CD9E442 /* Pods-chatik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chatik/Pods-chatik.debug.xcconfig"; sourceTree = "<group>"; };
 		D912B6171DC8D2B200A89785 /* chatik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatik.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D912B61A1DC8D2B200A89785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D912B61C1DC8D2B200A89785 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D912B6211DC8D2B200A89785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D912B61A1DC8D2B200A89785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = chatik/AppDelegate.swift; sourceTree = "<group>"; };
+		D912B61C1DC8D2B200A89785 /* OpenChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenChatListViewController.swift; sourceTree = "<group>"; };
+		D912B6211DC8D2B200A89785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = chatik/Assets.xcassets; sourceTree = "<group>"; };
 		D912B6241DC8D2B200A89785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D912B6261DC8D2B200A89785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D912B6261DC8D2B200A89785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = chatik/Info.plist; sourceTree = "<group>"; };
+		D9A223B11DD37F8D00865BEC /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		D9D985D41DCA2EBC00531D56 /* OpenChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenChatViewController.swift; sourceTree = "<group>"; };
 		D9D985DB1DCA3EF900531D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				D912B6191DC8D2B200A89785 /* chatik */,
+				D9A1D8841DD48CAD00FD9BEE /* supportingFiles */,
 				D912B6181DC8D2B200A89785 /* Products */,
 				6DF5AD48F00A1D72863120DA /* Pods */,
 				59210A1E09F64096BE38C85C /* Frameworks */,
@@ -76,15 +79,23 @@
 		D912B6191DC8D2B200A89785 /* chatik */ = {
 			isa = PBXGroup;
 			children = (
+				D9A223B11DD37F8D00865BEC /* MainPageViewController.swift */,
+				D912B61C1DC8D2B200A89785 /* OpenChatListViewController.swift */,
 				D9D985D41DCA2EBC00531D56 /* OpenChatViewController.swift */,
-				D912B61A1DC8D2B200A89785 /* AppDelegate.swift */,
-				D912B61C1DC8D2B200A89785 /* ViewController.swift */,
-				D912B6211DC8D2B200A89785 /* Assets.xcassets */,
 				D9D985DA1DCA3EF900531D56 /* Main.storyboard */,
+			);
+			path = chatik;
+			sourceTree = "<group>";
+		};
+		D9A1D8841DD48CAD00FD9BEE /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D912B61A1DC8D2B200A89785 /* AppDelegate.swift */,
+				D912B6211DC8D2B200A89785 /* Assets.xcassets */,
 				D912B6231DC8D2B200A89785 /* LaunchScreen.storyboard */,
 				D912B6261DC8D2B200A89785 /* Info.plist */,
 			);
-			path = chatik;
+			name = supportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A223B21DD37F8D00865BEC /* MainPageViewController.swift in Sources */,
 				D9D985D51DCA2EBC00531D56 /* OpenChatViewController.swift in Sources */,
-				D912B61D1DC8D2B200A89785 /* ViewController.swift in Sources */,
+				D912B61D1DC8D2B200A89785 /* OpenChatListViewController.swift in Sources */,
 				D912B61B1DC8D2B200A89785 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +236,7 @@
 				D912B6241DC8D2B200A89785 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = chatik;
 			sourceTree = "<group>";
 		};
 		D9D985DA1DCA3EF900531D56 /* Main.storyboard */ = {

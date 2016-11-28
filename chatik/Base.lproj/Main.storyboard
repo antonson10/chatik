@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y7Q-aa-NlZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3uc-PZ-UKe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Open Chat List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chatik" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OpenChatListViewController" customModule="chatik" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,39 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Z9b-PR-5oj">
-                                <rect key="frame" x="20" y="72" width="560" height="35"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g50-z9-st7" userLabel="connect">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="35"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
-                                        <state key="normal" title="connect to DB">
-                                            <color key="titleColor" red="1" green="0.25819005239999998" blue="0.26089627809999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="1" green="0.92570087779999999" blue="0.44429632819999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="connectToDB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zFN-P5-svV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fc-P2-OHo">
-                                        <rect key="frame" x="225" y="0.0" width="335" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Connect to open chat"/>
-                                        <connections>
-                                            <action selector="connectToOpenChannel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nip-jg-Csi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="fpM-fd-9ev"/>
-                                </constraints>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ki-rJ-VEJ">
-                                <rect key="frame" x="20" y="127" width="560" height="453"/>
+                                <rect key="frame" x="20" y="64" width="560" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="openChannels" textLabel="f7R-2i-hTW" style="IBUITableViewCellStyleDefault" id="yna-pA-xns">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yna-pA-xns" id="kQx-Ue-XQT">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
@@ -78,21 +51,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="3ki-rJ-VEJ" secondAttribute="bottom" constant="20" symbolic="YES" id="3Bm-Lk-wge"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z9b-PR-5oj" secondAttribute="trailing" id="AWX-aa-TE1"/>
-                            <constraint firstItem="3ki-rJ-VEJ" firstAttribute="trailing" secondItem="Z9b-PR-5oj" secondAttribute="trailing" id="C2J-HD-anD"/>
-                            <constraint firstItem="Z9b-PR-5oj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="f3r-6P-Vsc"/>
-                            <constraint firstItem="Z9b-PR-5oj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ffC-ER-nng"/>
-                            <constraint firstItem="3ki-rJ-VEJ" firstAttribute="leading" secondItem="Z9b-PR-5oj" secondAttribute="leading" id="gJF-jh-cG9"/>
-                            <constraint firstItem="3ki-rJ-VEJ" firstAttribute="top" secondItem="Z9b-PR-5oj" secondAttribute="bottom" constant="20" id="tet-s0-ToN"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3ki-rJ-VEJ" secondAttribute="leading" id="DMs-Ta-UOK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3ki-rJ-VEJ" secondAttribute="trailing" id="VBh-qs-9gD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ki-rJ-VEJ" secondAttribute="bottom" constant="20" id="YxW-vA-Bhb"/>
+                            <constraint firstItem="3ki-rJ-VEJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i8e-uE-cFj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xVv-6R-iYn">
-                        <barButtonItem key="rightBarButtonItem" title="Chat" id="NFR-kW-cIu">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="UB5-Ic-HSy">
                             <connections>
-                                <segue destination="yED-Vk-MCd" kind="presentation" identifier="connectToOpenChat" id="jsR-fV-UM8"/>
+                                <action selector="clickBack:" destination="BYZ-38-t0r" id="kuz-XR-6ao"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Chat" id="NFR-kW-cIu"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="3ki-rJ-VEJ" id="zZJ-bx-7C1"/>
@@ -100,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973" y="358"/>
+            <point key="canvasLocation" x="1757" y="62"/>
         </scene>
         <!--Open Chat View Controller-->
         <scene sceneID="Bfs-sB-a36">
@@ -210,7 +181,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lY-AC-czI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2477" y="358"/>
+            <point key="canvasLocation" x="3157" y="62"/>
+        </scene>
+        <!--Main Page View Controller-->
+        <scene sceneID="TCQ-Ww-spk">
+            <objects>
+                <viewController id="M2Q-k7-RLi" customClass="MainPageViewController" customModule="chatik" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JXO-69-nZ1"/>
+                        <viewControllerLayoutGuide type="bottom" id="nn1-Rb-CCa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ebj-IJ-RVC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IOo-1K-mTs">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input your ID here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-k1-8lM">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hBu-pY-yjZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g50-z9-st7" userLabel="connect">
+                                        <rect key="frame" x="360" y="0.0" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="YqO-vz-Lnc"/>
+                                            <constraint firstAttribute="height" constant="35" id="reu-bT-Xjx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <state key="normal" title="connect to DB">
+                                            <color key="titleColor" red="1" green="0.25819005239999998" blue="0.26089627809999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="1" green="0.92570087779999999" blue="0.44429632819999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="connectToDB:" destination="M2Q-k7-RLi" eventType="touchUpInside" id="sSe-0G-1YM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dbM-pc-fjs">
+                                <rect key="frame" x="20" y="110" width="560" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fc-P2-OHo">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Connect to open chat"/>
+                                        <connections>
+                                            <segue destination="y7Q-aa-NlZ" kind="presentation" identifier="goToOpenChat" id="10a-WA-j7P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs7-v5-IYa">
+                                        <rect key="frame" x="290" y="0.0" width="270" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Connect to base chat"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yei-UZ-fid"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IOo-1K-mTs" secondAttribute="trailing" id="0qu-oc-iR4"/>
+                            <constraint firstItem="IOo-1K-mTs" firstAttribute="leading" secondItem="ebj-IJ-RVC" secondAttribute="leadingMargin" id="GXK-aU-qsw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dbM-pc-fjs" secondAttribute="trailing" id="HbO-ZL-8QE"/>
+                            <constraint firstItem="IOo-1K-mTs" firstAttribute="top" secondItem="JXO-69-nZ1" secondAttribute="bottom" constant="8" id="LDS-NH-0ay"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dbM-pc-fjs" secondAttribute="leading" id="XTa-5p-kWH"/>
+                            <constraint firstItem="dbM-pc-fjs" firstAttribute="top" secondItem="IOo-1K-mTs" secondAttribute="bottom" constant="8" id="YhU-JN-A3a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yrp-UD-390"/>
+                    <connections>
+                        <outlet property="connectToBaseChatButton" destination="xs7-v5-IYa" id="ZDc-yO-roc"/>
+                        <outlet property="connectToOpenChatButton" destination="6fc-P2-OHo" id="srt-yt-8pS"/>
+                        <outlet property="userIdentifier" destination="Mem-k1-8lM" id="Wh7-Zt-QNu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGA-SU-voq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="358"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="90C-KI-Iu9">
@@ -228,7 +282,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfp-dL-jBa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="358"/>
+            <point key="canvasLocation" x="1015" y="62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KHw-tl-gXu">
@@ -246,10 +300,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjO-5J-LbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="358"/>
+            <point key="canvasLocation" x="2451" y="62"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LZG-au-8X9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3uc-PZ-UKe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bZz-im-H1e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M2Q-k7-RLi" kind="relationship" relationship="rootViewController" id="1EY-of-uaE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPy-ja-kQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="358"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="jsR-fV-UM8"/>
-    </inferredMetricsTieBreakers>
 </document>

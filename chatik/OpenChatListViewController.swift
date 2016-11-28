@@ -10,16 +10,13 @@ import UIKit
 import SendBirdSDK
 import Dispatch
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+class OpenChatListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
     @IBOutlet weak var tableView: UITableView!
     
     let channelCellIdentifier = "openChannels"
-    //let USER_ID = "anton.chugunov10@gmail.com"
-    //let USER_ID = "00000001"
-    let USER_ID = "anton.chugunov9@yandex.ru"
-    let USER_NICKNAME = "Antoha"
+    
     
     private var openChannelListQuery:SBDOpenChannelListQuery?
     private var channels:[SBDOpenChannel] = []
@@ -30,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        //isUploaded = false
+        self.connectToOpenChannel()
     }
 
     override func didReceiveMemoryWarning()
@@ -39,20 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func connectToDB(sender: UIButton)
-    {
-        SBDMain.connectWithUserId(USER_ID)
-        { (USER_NICKNAME, error) in
-            if error != nil {
-                print("Error!")
-            }
-            else {
-                print("Connected!!!!")
-            }
-        }
-    }
-
-    @IBAction func connectToOpenChannel(sender: UIButton)
+    func connectToOpenChannel()
     {
         self.channels.removeAll()
         self.openChannelListQuery = SBDOpenChannel.createOpenChannelListQuery()
@@ -82,6 +66,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             })
         })
         
+    }
+    
+    @IBAction func clickBack(sender: UIBarButtonItem)
+    {
+        closeOpenChatList()
+    }
+    
+    func closeOpenChatList()
+    {
+        let presentedModally = presentingViewController is UINavigationController
+        if presentedModally
+        {
+            dismissViewControllerAnimated(true, completion: {})
+        }
     }
     
     //MARK: TableView
